@@ -1,7 +1,32 @@
 <!doctype html>
-  <title></title>
+  <title>COUNTRIES</title>
+    
+  <body>
+    <input type="text" id="text1" name="firstCountry">
+    <p>
+      vs.
+    </p>
+    <input type="text" id="text2" name="secondCountry">
+    <input type="button" value="submit" onclick="onSubmit()">
+    <script language="javascript" type="text/javascript">
+      var text1;
+      var text2;
+      function onSubmit() {
+        getText()
+        
+      }
+      // need to get a search function thatll also display code
+      function getText() {
+        text1 = document.getElementById("text1").value;
+        text2 = document.getElementById("text2").value;
+        console.log(text1);
+        console.log(text2);
+      }
+    </script>
 
-  <body></body>
+
+
+  </body>
 
 
 
