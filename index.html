@@ -2,12 +2,43 @@
   <title>Where's the bass?</title>
     
   <body>
-    <div style="width:50px; height:50px; background-color:red"></div>
-    <input type="text" id="text1" name="firstCountry">
+    <style>
+      html {
+	      font-size: 62.5%;
+      }
+      body {
+	      background-color: white;
+	      color: black;
+	      font-family: helvetica, arial, sans-serif;
+	      font-size: 1.4em; /* equiv 14px */
+	      line-height: 1.5; /* adapt to your design */
+      }
+      /* you shall not pass */
+      div, textarea, table, td, th, code, pre, samp {
+	      word-wrap: break-word;
+      }
+      .left {
+        float: left;
+      }
+      .w50 {
+        width: 50%;
+      }
+    </style>
+    <div id="content">
+      <div class="left w50">
+      <input type="text" id="text1" name="firstCountry">
+      
+      </div>
+      <div class="left w50">
+      <input type="text" id="text2" name="secondCountry">
+      
+      </div>
+  </div>
+    
     <p>
       vs
     </p>
-    <input type="text" id="text2" name="secondCountry">
+    
     <input type="button" value="submit" onclick="getText()">
     <p>
       docl
