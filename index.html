@@ -1,28 +1,36 @@
 <!doctype html>
-  <title>COUNTRIES</title>
+  <title>Where's the bass?</title>
     
   <body>
     <input type="text" id="text1" name="firstCountry">
     <p>
-      vs.
+      vs
     </p>
     <input type="text" id="text2" name="secondCountry">
-    <input type="button" value="submit" onclick="onSubmit()">
+    <input type="button" value="submit" onclick="getText()">
+    <p>
+      docl
+    </p>
+    <input type="button" value="submit" onclick="printText()">
     <script language="javascript" type="text/javascript">
       var text1;
       var text2;
-      function onSubmit() {
-        getText()
-        
-      }
-      // CODEANYWHERE.COM
-      // need to get a search function thatll also display code
       function getText() {
+        console.log(text1);
         text1 = document.getElementById("text1").value;
         text2 = document.getElementById("text2").value;
         console.log(text1);
         console.log(text2);
       }
+      function readJSON(file) {
+        var request = new XMLHttpRequest();
+        request.open('GET', file, false);
+        request.send(null);
+        if (request.status == 200)
+          return request.responseText;
+      }
+      var jsonVar = readJSON('country.json');
+      console.log(jsonVar);
     </script>
 
 
